@@ -125,7 +125,27 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\n//# sourceURL=webpack://js-group-capstone/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_app_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/app.js */ \"./src/modules/app.js\");\n\n\n\n(0,_modules_app_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://js-group-capstone/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/app.js":
+/*!****************************!*\
+  !*** ./src/modules/app.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _images_game_of_thrones_banner_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/game_of_thrones_banner.jpg */ \"./src/images/game_of_thrones_banner.jpg\");\n\n\nconst app = () => {\n  document.getElementById('logo').src = _images_game_of_thrones_banner_jpg__WEBPACK_IMPORTED_MODULE_0__;\n  document.getElementById('contain').textContent = 'Welcome to Henary & Eric Js Capstone';\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (app);\n\n//# sourceURL=webpack://js-group-capstone/./src/modules/app.js?");
+
+/***/ }),
+
+/***/ "./src/images/game_of_thrones_banner.jpg":
+/*!***********************************************!*\
+  !*** ./src/images/game_of_thrones_banner.jpg ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"6279a55d4eec32a0e52c.jpg\";\n\n//# sourceURL=webpack://js-group-capstone/./src/images/game_of_thrones_banner.jpg?");
 
 /***/ }),
 
