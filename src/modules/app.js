@@ -1,7 +1,5 @@
 import Logo from '../images/game_of_thrones_banner.jpg';
-import { getChars, getCode } from './api_manager.js';
-
-getCode();
+import { getChars } from './api_manager.js';
 
 const btnLikeHandler = () => {
   console.log('Like BTN click');
