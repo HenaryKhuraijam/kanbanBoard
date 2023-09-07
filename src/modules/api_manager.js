@@ -12,7 +12,7 @@ const getCode = async () => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   }).then((response) => response.text())
-    .then((response) => console.log(response));
+    .then((response) => response);
 };
 
 const postLike = async (obj) => {
@@ -24,9 +24,13 @@ const postLike = async (obj) => {
     body: JSON.stringify(obj),
   })
     .then((response) => response.text())
-    .then((likeData) => {
-      console.log(likeData);
-    });
+    .then((likeData) => likeData);
+};
+
+const getLikes = async (callBack) => {
+  const response = await fetch(likeURL)
+    .then((response) => (response.json()));
+  callBack(response);
 };
 
 const getChars = async (callback) => {
@@ -34,4 +38,6 @@ const getChars = async (callback) => {
   callback(response);
 };
 
-export { getChars, getCode, postLike };
+export {
+  getChars, getCode, postLike, getLikes,
+};

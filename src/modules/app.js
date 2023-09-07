@@ -1,11 +1,19 @@
 import Logo from '../images/game_of_thrones_banner.jpg';
-import { getChars, postLike } from './api_manager.js';
+import { getChars, postLike, getLikes } from './api_manager.js';
+
+const populateLikes = (likes) => {
+  likes.forEach((char, i) => {
+    document.getElementById(`l-${i}`).textContent = `Likes ${char.likes}`;
+  });
+};
 
 const btnLikeHandler = (e) => {
   const newLike = {
     item_id: `${e.target.id}`,
   };
   postLike(newLike);
+  getLikes(populateLikes);
+  e.stopPropagation();
 };
 
 const btnCommentHandler = () => {
@@ -33,6 +41,7 @@ const characterList = (chars) => {
     document.getElementById(`${char.id}`).addEventListener('click', btnCommentHandler);
   });
 };
+getLikes(populateLikes);
 
 const app = () => {
   document.getElementById('logo').src = Logo;
