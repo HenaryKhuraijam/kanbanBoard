@@ -173,7 +173,6 @@ button:hover {
   position: fixed;
   height: 100vh;
   overflow: auto;
-  background-image: url('./images/images-logo2.jpg');
   background-position-x: right;
   background-position-y: bottom;
   background-repeat: no-repeat;

@@ -1,8 +1,11 @@
 import Logo from '../images/game_of_thrones_banner.jpg';
-import getChars from './api_manager.js';
+import { getChars, postLike } from './api_manager.js';
 
-const btnLikeHandler = () => {
-  console.log('Like BTN click');
+const btnLikeHandler = (e) => {
+  const newLike = {
+    item_id: `${e.target.id}`,
+  };
+  postLike(newLike);
 };
 
 const btnCommentHandler = () => {
