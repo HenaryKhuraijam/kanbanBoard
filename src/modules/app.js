@@ -1,5 +1,6 @@
 import Logo from '../images/game_of_thrones_banner.jpg';
 import { getChars, postLike, getLikes } from './api_manager.js';
+import  commentHandler  from './commentHandler';
 
 const populateLikes = (likes) => {
   likes.forEach((char, i) => {
@@ -14,11 +15,9 @@ const btnLikeHandler = (e) => {
   postLike(newLike);
   getLikes(populateLikes);
   e.stopPropagation();
+  getLikes(populateLikes);
 };
 
-const btnCommentHandler = () => {
-  console.log('Comment ');
-};
 
 const charCounts = (chars) => (chars.length);
 const characterList = (chars) => {
@@ -38,10 +37,10 @@ const characterList = (chars) => {
     </button>`;
     mainStarList.appendChild(articleChar);
     document.getElementById(`h-${char.id}`).addEventListener('click', btnLikeHandler);
-    document.getElementById(`${char.id}`).addEventListener('click', btnCommentHandler);
+    document.getElementById(`${char.id}`).addEventListener('click', commentHandler);
   });
 };
-getLikes(populateLikes);
+
 const app = () => {
   document.getElementById('logo').src = Logo;
   getChars(characterList);
