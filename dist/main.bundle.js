@@ -135,7 +135,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst reqBaseURL = 'https://thronesapi.com/api/v2/Characters/';\nconst BaseURL = new Request(reqBaseURL);\n\nconst getChars = async () => {\n  const response = await fetch(BaseURL);\n  const charList = await response.json();\n  return charList;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getChars);\n\n//# sourceURL=webpack://js-group-capstone/./src/modules/api_manager.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst reqBaseURL = 'https://thronesapi.com/api/v2/Characters/';\nconst BaseURL = new Request(reqBaseURL);\n\nconst getChars = async () => {\n  const response = await fetch(BaseURL).then((response) => response.json());\n  return response;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getChars);\n\n//# sourceURL=webpack://js-group-capstone/./src/modules/api_manager.js?");
 
 /***/ }),
 
