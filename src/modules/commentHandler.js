@@ -1,16 +1,14 @@
-import { InvolvementURL, reqBaseURL } from './api_manager.js';
+import { appBaseURL, reqBaseURL } from './api_manager.js';
 import submitHandler from './submitHandler.js';
 
 const commentCounter = (commentsFromApi) => commentsFromApi.length;
 const commentHandler = async (e) => {
-  // fetch data from API
   const { id } = e.target;
 
   const request = new Request(`${reqBaseURL}${id}`);
   const response = await fetch(request);
   const displayStar = await response.json();
 
-  // create modal fromthe API
   const modalContainer = document.querySelector('article');
   const modal = document.createElement('div');
   modal.classList.add('modal');
@@ -59,9 +57,7 @@ const commentHandler = async (e) => {
 
   modalContainer.appendChild(modal);
 
-  // create comments section dynamically
-
-  const commentRequest = new Request(`${InvolvementURL}comments?item_id=ID_${id}`);
+  const commentRequest = new Request(`${appBaseURL}comments?item_id=ID_${id}`);
   const commentResponse = await fetch(commentRequest);
   const showComment = await commentResponse.json();
 
@@ -83,6 +79,7 @@ const commentHandler = async (e) => {
   for (let i = 0; i < showComment.length; i += 1) {
     const createComment = document.createElement('li');
     createComment.classList.add('create-comment');
+    console.log(showComment);
     createComment.innerHTML = `<span>${showComment[i].creation_date}</span>  <span>${showComment[i].username}:</span>  <span>${showComment[i].comment}</span>`;
     displayComment.appendChild(createComment);
   }

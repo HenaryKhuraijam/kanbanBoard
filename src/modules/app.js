@@ -3,7 +3,6 @@ import { getChars, postLike, getLikes } from './api_manager.js';
 import commentHandler from './commentHandler.js';
 
 const populateLikes = (likes) => {
-  console.log(...likes);
   likes.forEach((char) => {
     document.getElementById(`l-${char.item_id}`).textContent = `Likes ${char.likes}`;
   });
@@ -16,13 +15,13 @@ const btnLikeHandler = (e) => {
   postLike(newLike);
   getLikes(populateLikes);
   e.stopPropagation();
+  getLikes(populateLikes);
 };
 
 const charCounts = (chars) => (chars.length);
 const characterList = (chars) => {
   document.getElementById('throne-stars').textContent = `Characters (${charCounts(chars)})`;
   const mainStarList = document.querySelector('main');
-  console.log(...chars);
   chars.forEach((char) => {
     const articleChar = document.createElement('article');
     articleChar.className = 'stars';
@@ -42,7 +41,6 @@ const characterList = (chars) => {
 };
 
 const app = () => {
-  document.getElementById('logo').src = Logo;
   getChars(characterList);
   getLikes(populateLikes);
 };

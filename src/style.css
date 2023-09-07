@@ -16,10 +16,9 @@ a {
 }
 
 header {
-  background-image: url('./images/game_of_thrones_banner.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  background-color: black;
+  background-color: #bcb2b2;
   margin: 0;
 }
 
@@ -66,13 +65,13 @@ header,
 }
 
 .navlink {
-  color: whitesmoke;
+  color: hsl(0, 0%, 5%);
 }
 
 .brand-name {
   font-size: 35px;
   padding: 0 10px;
-  color: whitesmoke;
+  color: hsl(0, 0%, 5%);
 }
 
 #throne-stars {
@@ -92,7 +91,6 @@ main {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  background-image: url('./images/got_background.jpg');
   background-repeat: repeat;
   background-size: contain;
 }
@@ -112,13 +110,13 @@ main {
 .stars {
   display: flex;
   flex-direction: column;
-  background-color: #261e1d;
+  background-color: #f62408;
   border: 1px solid rgb(22, 21, 21);
 }
 
 .stars:hover {
   box-shadow: 1px 1px 10px 3px #fff190;
-  background-color: #b9540c;
+  background-color: hsl(15, 73%, 70%);
 }
 
 .ct-ph {
@@ -133,7 +131,7 @@ main {
   height: 28px;
   font-size: 26px;
   line-height: 0.5em;
-  color: rgb(219, 85, 85);
+  color: rgb(28, 218, 14);
   background-color: transparent;
   border: none;
   display: flex;
@@ -154,10 +152,10 @@ button:hover {
 }
 
 .btn-comment {
-  height: 28px;
+  height: 35px;
   margin: 10px auto;
   margin-top: 15px;
-  width: 80%;
+  width: 60%;
   border: 1px solid #fff;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgb(0 0 0 / 90%);

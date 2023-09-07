@@ -1,5 +1,5 @@
-import { InvolvementURL } from './api_manager.js';
-// implement the submit comment functionality
+import { appBaseURL } from './api_manager.js';
+
 const submitHandler = async (e) => {
   const { id } = e.target;
 
@@ -7,7 +7,7 @@ const submitHandler = async (e) => {
   const commentTxt = document.querySelector('#comment');
 
   if (userName.value && commentTxt.value) {
-    const result = await fetch(`${InvolvementURL}comments`, {
+    const result = await fetch(`${appBaseURL}comments`, {
       method: 'POST',
       body: JSON.stringify({
         item_id: `${id}`,
@@ -20,9 +20,8 @@ const submitHandler = async (e) => {
     });
     const scoreResult = await result.text();
     console.log(scoreResult);
-    // To update comment section
 
-    const commentRequest = new Request(`${InvolvementURL}comments?item_id=${id}`);
+    const commentRequest = new Request(`${appBaseURL}comments?item_id=${id}`);
     const commentResponse = await fetch(commentRequest);
     const showComment = await commentResponse.json();
 
