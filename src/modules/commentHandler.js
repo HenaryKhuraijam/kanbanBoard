@@ -1,5 +1,5 @@
 import { InvolvementURL, reqBaseURL } from './api_manager.js';
-import submitHandler from './submitHandler.js'
+import submitHandler from './submitHandler.js';
 
 const commentCounter = (commentsFromApi) => commentsFromApi.length;
 const commentHandler = async (e) => {
