@@ -92,7 +92,7 @@ main {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  /* background-image: url('./images/'); */
+  background-image: url('./images/got_background.jpg');
   background-repeat: repeat;
   background-size: contain;
 }
