@@ -39,5 +39,5 @@ const getChars = async (callback) => {
 };
 
 export {
-  getChars, getCode, postLike, getLikes,
+  getChars, getCode, postLike, getLikes, InvolvementURL, reqBaseURL,
 };
