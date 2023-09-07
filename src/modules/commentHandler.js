@@ -1,4 +1,5 @@
 import { InvolvementURL, reqBaseURL } from './api_manager.js';
+import submitHandler from './submitHandler.js'
 
 const commentCounter = (commentsFromApi) => commentsFromApi.length;
 const commentHandler = async (e) => {
@@ -89,8 +90,8 @@ const commentHandler = async (e) => {
   const closeModal = document.querySelector('.close');
   closeModal.addEventListener('click', () => modal.remove());
 
-  // const submitBtn = document.getElementById(`ID_${id}`);
-  // submitBtn.addEventListener('click', submitComment);
+  const submitBtn = document.getElementById(`ID_${id}`);
+  submitBtn.addEventListener('click', submitHandler);
 };
 
 export default commentHandler;
