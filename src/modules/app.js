@@ -1,10 +1,10 @@
 import Logo from '../images/game_of_thrones_banner.jpg';
 import { getChars, postLike, getLikes } from './api_manager.js';
-import  commentHandler  from './commentHandler';
+import  commentHandler  from './commentHandler.js';
 
 const populateLikes = (likes) => {
   likes.forEach((char, i) => {
-    document.getElementById(`l-${i}`).textContent = `Likes ${char.likes}`;
+  document.getElementById(`l-${i}`).textContent = `Likes ${char.likes}`;
   });
 };
 
@@ -17,7 +17,6 @@ const btnLikeHandler = (e) => {
   e.stopPropagation();
   getLikes(populateLikes);
 };
-
 
 const charCounts = (chars) => (chars.length);
 const characterList = (chars) => {

@@ -89,7 +89,7 @@ const commentHandler = async (e) => {
   const closeModal = document.querySelector('.close');
   closeModal.addEventListener('click', () => modal.remove());
 
-  const submitBtn = document.getElementById(`ID_${id}`);
+  // const submitBtn = document.getElementById(`ID_${id}`);
   // submitBtn.addEventListener('click', submitComment);
 };
 
