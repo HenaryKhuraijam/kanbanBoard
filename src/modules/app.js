@@ -42,7 +42,6 @@ const characterList = (chars) => {
   });
 };
 getLikes(populateLikes);
-
 const app = () => {
   document.getElementById('logo').src = Logo;
   getChars(characterList);
