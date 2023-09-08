@@ -116,10 +116,23 @@ Install this project with:
 <!--
 Example command:
 
-```sh
-  cd my-project
-  gem install
+npm install
 ```
+Track HTML linter errors run:
+```
+npx hint .
+```
+Track CSS linter errors run:
+```
+npx stylelint "**/*.{css,scss}"
+```
+Track JavaScript linter errors run:
+```
+npx eslint .
+```
+### Deployment
+You can deploy this project using:
+GitHub pages
 --->
 
 ### Usage
@@ -151,6 +164,8 @@ npm run build start
 
 ## 🔭 Future Features <a name="future-features"></a>
 
+ **[Fans Registration]**
+  > A feature that allows fans registration.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -184,6 +199,6 @@ I would like to thank Microverse for the immense support.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/HenaryKhuraijam/kanbanBoard/blob/main/LICENSE) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
