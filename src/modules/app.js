@@ -1,4 +1,4 @@
-import Logo from '../images/game_of_thrones_banner.jpg';
+import Logo from '../images/warrior.JPG';
 import { getChars, postLike, getLikes } from './api_manager.js';
 import commentHandler from './commentHandler.js';
 
@@ -41,6 +41,7 @@ const characterList = (chars) => {
 };
 
 const app = () => {
+  document.getElementById('logo').src = Logo;
   getChars(characterList);
   getLikes(populateLikes);
 };
