@@ -7,6 +7,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -44,6 +45,14 @@
 
 - **[A home page showing a list of items]**
 - **[A popup window with more data about an item]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+
+- [Live Demo Link](https://henarykhuraijam.github.io/kanbanBoard/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
