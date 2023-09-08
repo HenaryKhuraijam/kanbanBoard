@@ -2,7 +2,7 @@ const reqBaseURL = 'https://thronesapi.com/api/v2/Characters/';
 const BaseURL = new Request(reqBaseURL);
 
 const InvolvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
-const appBaseURL = `${InvolvementURL}KfFQBfBx4KVrKL4cLb5E/`;
+const appBaseURL = `${InvolvementURL}J9qGfVk52oo8WPkXdWqi/`;
 const likeURL = new Request(`${appBaseURL}likes/`);
 
 const getCode = async () => {
@@ -24,7 +24,7 @@ const postLike = async (obj) => {
     body: JSON.stringify(obj),
   })
     .then((response) => response.text())
-    .then((likeData) => likeData);
+    .then((likeData) => console.log(likeData));
 };
 
 const getLikes = async (callBack) => {
@@ -39,5 +39,5 @@ const getChars = async (callback) => {
 };
 
 export {
-  getChars, getCode, postLike, getLikes, InvolvementURL, reqBaseURL,
+  getChars, getCode, postLike, getLikes, appBaseURL, reqBaseURL,
 };

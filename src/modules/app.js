@@ -1,16 +1,16 @@
-import Logo from '../images/game_of_thrones_banner.jpg';
+import Logo from '../images/warrior.jpg';
 import { getChars, postLike, getLikes } from './api_manager.js';
 import commentHandler from './commentHandler.js';
 
 const populateLikes = (likes) => {
-  likes.forEach((char, i) => {
-    document.getElementById(`l-${i}`).textContent = `Likes ${char.likes}`;
+  likes.forEach((char) => {
+    document.getElementById(`l-${char.item_id}`).textContent = `Likes ${char.likes}`;
   });
 };
 
 const btnLikeHandler = (e) => {
   const newLike = {
-    item_id: `${e.target.id}`,
+    item_id: `${e.target.id.split('-')[1]}`,
   };
   postLike(newLike);
   getLikes(populateLikes);
@@ -43,6 +43,7 @@ const characterList = (chars) => {
 const app = () => {
   document.getElementById('logo').src = Logo;
   getChars(characterList);
+  getLikes(populateLikes);
 };
 
 export default app;
