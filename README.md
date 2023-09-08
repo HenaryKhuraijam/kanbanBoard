@@ -52,7 +52,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://henarykhuraijam.github.io/kanbanBoard/)
+- [Live Demo Link](https://henarykhuraijam.github.io/kanbanBoard/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
