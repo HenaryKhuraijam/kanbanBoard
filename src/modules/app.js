@@ -1,6 +1,7 @@
 import Logo from '../images/warrior.jpg';
 import { getChars, postLike, getLikes } from './api_manager.js';
 import commentHandler from './commentHandler.js';
+import { charCounts } from './itemCounter';
 
 const populateLikes = (likes) => {
   likes.forEach((char) => {
@@ -18,7 +19,6 @@ const btnLikeHandler = (e) => {
   getLikes(populateLikes);
 };
 
-const charCounts = (chars) => (chars.length);
 const characterList = (chars) => {
   document.getElementById('throne-stars').textContent = `Characters (${charCounts(chars)})`;
   const mainStarList = document.querySelector('main');
