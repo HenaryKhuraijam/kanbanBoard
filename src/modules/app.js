@@ -1,4 +1,4 @@
-import Logo from '../images/warrior.JPG';
+import Logo from '../images/warrior.jpg';
 import { getChars, postLike, getLikes } from './api_manager.js';
 import commentHandler from './commentHandler.js';
 
